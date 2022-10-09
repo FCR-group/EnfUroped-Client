@@ -1,4 +1,4 @@
-# EnfUropedClient
+# Enf UroPed
 
 ## Como settar o ambiente
 Antes de instalar de fato os pré-requisitos, para facilitar a codificação, pesquise nas configurações do vscode a opção "Format on Save" e instale a seguinte extensão:
