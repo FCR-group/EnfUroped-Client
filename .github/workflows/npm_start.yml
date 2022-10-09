@@ -3,7 +3,7 @@ name: start check
 on:
   push:
     branches: [ "main", "develop" ]
-    paths-ignore: [".github/**"]
+    paths-ignore: [".github/**", "README.md"]
     
   pull_request:
     branches: [ "main", "develop" ]
