@@ -35,6 +35,22 @@ Sempre utilizar nomes em inglês, seja para métodos, funções, classes, compon
 
 Lembrar de exportar/importar coisas no módulo. Se vc adicionou algo e ficou tudo vermelho, verifique no módulo. Se vc criou um componente e ele não ta dando autocomplete no vscode, verifique no módulo.
 
-Para criar um componente utiliza-se o comando `ng g c "nome-do-componente"` no path de onde você quer criar o componente, sendo que o path de criação deve seguir a seguinte regra:
-- Se o componente será utilizado em outras partes do sistema ele deve ser criado na pasta `shared`.
-- Se um componente está muito grande, deve-se analisar se algo não pode ser componentizado. Casos seja o caso, crie-o na pasta de components dentro dessa pasta do componente. Caso a pasta não exista crie, sempre em inglês: `components`
+Para iniciar o desenvolvimento de uma nova funcionalidade/tela, deve-se fazer os seguintes passos:
+- Abrir um terminal na pasta `uroped` (`shared` se o componente será utilizado em outras partes do sistema, por exemplo, uma nav-bar);
+- Digitar os comandos 
+```
+ng g m "nome-do-modulo" --routing
+cd nome-do-modulo
+mkdir pages
+mkdir components
+cd pages
+ng g c "nome-da-pagina"
+```
+- Exemplo:
+
+  ![image](https://user-images.githubusercontent.com/69909375/194769308-30dcbed1-0db1-4ae0-8593-138cc0f2d4fe.png)
+  
+- Criar um path no modulo routing gerado:
+
+![image](https://user-images.githubusercontent.com/69909375/194769452-56dbf2ca-397f-45c1-8f56-5cc4bb1621ac.png)
+
