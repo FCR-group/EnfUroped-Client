@@ -1,0 +1,29 @@
+name: start check
+
+on:
+  push:
+    branches: [ "main", "develop" ]
+    paths-ignore: [".github/**"]
+    
+  pull_request:
+    branches: [ "main", "develop" ]
+    paths-ignore: [".github/**"]
+  
+  workflow_dispatch:
+  
+jobs:
+  start_project:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3.5.0
+        with:
+            node-version: 14.20.1
+
+      - uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: npm i
+        
+      - name: Start project
+        run: npm start
