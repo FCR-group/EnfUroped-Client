@@ -1,0 +1,12 @@
+<div class="nav-bar">
+    <div class="buttons" [ngClass]="isNavColumnOpen? 'buttons move' : 'buttons'
+        ">
+        <button *ngIf="!isNavColumnOpen" mat-button (click)="navColumn()"><mat-icon
+                class="mat-18">menu</mat-icon></button>
+        <button *ngIf="isNavColumnOpen" mat-button (click)="navColumn()"><mat-icon
+                class="mat-18">close</mat-icon></button>
+
+        <button mat-button (click)="redirectTo('home')">Início</button>
+        <button mat-button (click)="redirectTo('login')">Login</button>
+    </div>
+</div>
