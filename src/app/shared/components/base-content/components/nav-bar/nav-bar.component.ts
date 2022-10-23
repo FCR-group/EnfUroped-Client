@@ -22,7 +22,9 @@ export class NavBarComponent implements OnInit {
                 this.navigationService.navigate(['']);
                 break;
             case 'login':
-                this.navigationService.navigate(['login']);
+                this.navigationService.navigate(['access'], {
+                    extras: { state: { login: true } },
+                });
                 break;
         }
     }
@@ -37,7 +39,9 @@ export class NavBarComponent implements OnInit {
         }
 
         console.log(
-            this.isNavColumnOpen ? 'Navigation Open' : 'Navigation Closed'
+            this.isNavColumnOpen
+                ? 'Navigation SideBar Open'
+                : 'Navigation SideBar Closed'
         );
     }
 }

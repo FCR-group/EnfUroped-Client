@@ -1,0 +1,21 @@
+.logonComponent {
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #ffb399;
+    background-image: radial-gradient(at 12% 75%, hsla(319, 100%, 65%, 1) 0px, transparent 50%),
+        radial-gradient(at 20% 42%, hsla(200, 100%, 74%, 1) 0px, transparent 50%),
+        radial-gradient(at 54% 67%, hsla(185, 100%, 78%, 1) 0px, transparent 50%),
+        radial-gradient(at 63% 3%, hsla(132, 100%, 66%, 1) 0px, transparent 50%),
+        radial-gradient(at 87% 16%, hsla(229, 100%, 61%, 1) 0px, transparent 50%),
+        radial-gradient(at 81% 56%, hsla(27, 100%, 68%, 1) 0px, transparent 50%),
+        radial-gradient(at 62% 70%, hsla(337, 100%, 75%, 1) 0px, transparent 50%);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}

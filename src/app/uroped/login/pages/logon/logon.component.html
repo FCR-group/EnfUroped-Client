@@ -1,1 +1,9 @@
-<p>logon works!</p>
+<div class="logonComponent">
+    <div class="form">
+        <div>
+            <form-logon (onSignIn)="signup()" (onSubmit)="login()"></form-logon>
+        </div>
+        <div> <button class="home" mat-flat-button
+                (click)="goToHome()">UroPed</button></div>
+    </div>
+</div>

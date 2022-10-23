@@ -11,13 +11,29 @@ import { delay, filter } from 'rxjs';
     styleUrls: ['./base-content.component.scss'],
 })
 export class BaseContentComponent implements OnInit {
+    currentRoute: string = '';
+
     isNavColumnOpen: boolean = false;
     userLogedIn: boolean = false;
+    login: boolean = false;
 
     @ViewChild(MatSidenav)
     sidenav!: MatSidenav;
 
-    constructor(private observer: BreakpointObserver, private router: Router) {}
+    constructor(private observer: BreakpointObserver, private router: Router) {
+        this.router.events.subscribe((event: any) => {
+            if (event instanceof NavigationEnd) {
+                this.currentRoute = event.url;
+
+                if (this.router.url.includes('access')) {
+                    this.login = true;
+                } else {
+                    this.login = false;
+                }
+            }
+        });
+    }
+
     ngOnInit(): void {}
 
     ngAfterViewInit() {
