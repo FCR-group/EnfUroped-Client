@@ -7,17 +7,17 @@ Antes de instalar de fato os pré-requisitos, para facilitar a codificação, pe
 ```
 sudo curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh
 sudo curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
-sudo source ~/.bashrc
-sudo nvm install v14.10.1
-sudo nvm use v14.10.1
-sudo npm install npm@latest -g
-sudo npm install -g @angular/cli
+source ~/.bashrc
+nvm install 16.18.0
+nvm use 14.10.1
+npm install npm@latest -g
+npm install -g @angular/cli
 ```
 
 
 Verifique a instalação do node com `node -v` e saída deve ser algo como:
 ```
-v14.20.1
+v16.18.0
 ```
 Verifique a instalação do npm com `npm --version` e saída deve ser algo como:
 ```
