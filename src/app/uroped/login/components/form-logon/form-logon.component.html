@@ -4,7 +4,8 @@
         <mat-card-content>
             <form [formGroup]="form" (ngSubmit)="send()" class="form">
                 <mat-form-field>
-                    <input matInput placeholder="CPF" formControlName="id"
+                    <input matInput mask="000.000.000-00" placeholder="CPF"
+                        formControlName="id"
                         required>
                     <mat-error>
                         CPF é obrigatório
