@@ -10,7 +10,7 @@ const routes: Routes = [
             ),
     },
     {
-        path: 'login',
+        path: 'access',
         loadChildren: () =>
             import('./uroped/login/login.module').then((m) => m.LoginModule),
     },

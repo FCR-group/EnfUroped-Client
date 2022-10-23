@@ -1,0 +1,21 @@
+.registerComponent {
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #d8ff99;
+    background-image: radial-gradient(at 51% 45%, hsla(349, 83%, 64%, 1) 0px, transparent 50%),
+        radial-gradient(at 40% 45%, hsla(245, 75%, 65%, 1) 0px, transparent 50%),
+        radial-gradient(at 11% 83%, hsla(232, 90%, 71%, 1) 0px, transparent 50%),
+        radial-gradient(at 95% 3%, hsla(123, 82%, 64%, 1) 0px, transparent 50%),
+        radial-gradient(at 98% 31%, hsla(46, 61%, 75%, 1) 0px, transparent 50%),
+        radial-gradient(at 27% 86%, hsla(147, 70%, 78%, 1) 0px, transparent 50%),
+        radial-gradient(at 17% 51%, hsla(119, 86%, 62%, 1) 0px, transparent 50%);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
