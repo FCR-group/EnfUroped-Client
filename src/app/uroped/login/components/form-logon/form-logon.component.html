@@ -1,1 +1,36 @@
-<p>form-logon works!</p>
+<div class="box">
+    <mat-card class="box-inner">
+        <div class="box-header">Acesso à plataforma</div>
+        <mat-card-content>
+            <form [formGroup]="form" (ngSubmit)="send()" class="form">
+                <mat-form-field>
+                    <input matInput placeholder="CPF" formControlName="id"
+                        required>
+                    <mat-error>
+                        CPF é obrigatório
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <input matInput placeholder="Senha"
+                        formControlName="password" type="password"
+                        required="true">
+                    <mat-error>
+                        Senha é obrigatória
+                    </mat-error>
+                </mat-form-field>
+                <div class="buttons">
+                    <div class="register">
+                        <span class="registerLabel">Não possui cadastro ?</span>
+                        <button class="registerButton" mat-flat-button
+                            (click)="register()">Cadastre-se</button>
+                    </div>
+                    <div>
+                        <button class="loginButton" mat-raised-button
+                            color="primary"
+                            [disabled]="!form.valid" type="submit">Acessar</button>
+                    </div>
+                </div>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

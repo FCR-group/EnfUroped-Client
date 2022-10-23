@@ -1,0 +1,42 @@
+.box {
+    width: 75vw;
+    max-width: 750px;
+}
+
+.box-header {
+    text-align: center;
+    font-size: large;
+    font-weight: 500;
+    margin-bottom: 8px;
+    line-height: 32px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+:host ::ng-deep {
+    .register {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        .registerButton {
+            padding: 0;
+            span {
+                color: #4169e1;
+            }
+        }
+    }
+
+    .loginButton {
+        width: 102px;
+        margin-top: 4px;
+    }
+}
