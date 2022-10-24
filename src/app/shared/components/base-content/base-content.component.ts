@@ -15,7 +15,7 @@ export class BaseContentComponent implements OnInit {
 
     isNavColumnOpen: boolean = false;
     userLogedIn: boolean = false;
-    login: boolean = false;
+    loadNav: boolean = true;
 
     @ViewChild(MatSidenav)
     sidenav!: MatSidenav;
@@ -25,10 +25,13 @@ export class BaseContentComponent implements OnInit {
             if (event instanceof NavigationEnd) {
                 this.currentRoute = event.url;
 
-                if (this.router.url.includes('access')) {
-                    this.login = true;
+                if (
+                    this.router.url.includes('access') ||
+                    this.router.url.includes('error')
+                ) {
+                    this.loadNav = false;
                 } else {
-                    this.login = false;
+                    this.loadNav = true;
                 }
             }
         });

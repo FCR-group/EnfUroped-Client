@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 export class NavigationService {
     constructor(private router: Router) {}
 
-    navigate(path: string[], extras?: any) {
+    navigate(path: string[], extras?: Object) {
         if (extras) {
             this.router.navigate(path, extras).then(
                 (nav) => {

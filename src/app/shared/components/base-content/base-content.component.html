@@ -1,4 +1,4 @@
-<div *ngIf="!login">
+<div *ngIf="loadNav">
     <div *ngIf="!userLogedIn">
         <nav-bar (onOpenNavColumn)="openMenu($event)"></nav-bar>
         <nav-column *ngIf="isNavColumnOpen"></nav-column>
@@ -61,6 +61,6 @@
     </div>
 </div>
 
-<div *ngIf="login">
+<div *ngIf="!loadNav">
     <router-outlet></router-outlet>
 </div>
