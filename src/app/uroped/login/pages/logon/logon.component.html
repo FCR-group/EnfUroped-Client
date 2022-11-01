@@ -1,7 +1,7 @@
 <div class="logonComponent">
     <div class="form">
         <div>
-            <form-logon (onSignIn)="signup()" (onSubmit)="login()"></form-logon>
+            <form-logon (onSignIn)="signup()" (onSubmit)="login($event)"></form-logon>
         </div>
         <div> <button class="home" mat-flat-button
                 (click)="goToHome()">UroPed</button></div>

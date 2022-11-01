@@ -1,4 +1,4 @@
 export class LogonModel {
-    id!: string;
+    cpf!: string;
     password!: string;
 }
